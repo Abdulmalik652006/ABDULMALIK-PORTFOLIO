@@ -10,3 +10,4 @@
   <rect width="92" height="92" x="4" y="4" rx="20" fill="none" stroke="url(#grad)" stroke-width="2.5" />
   <text x="50" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" fill="url(#grad)" text-anchor="middle">AM</text>
 </svg>
+

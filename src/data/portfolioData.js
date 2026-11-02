@@ -6,8 +6,8 @@ export const personalInfo = {
   location: "Chennai, India",
   phone: "+917550365320",
   email: "abdulmalikbj06@gmail.com",
-  github: "https://github.com/abdulmalikbj",
-  linkedin: "https://linkedin.com/in/abdulmalikbj",
+  github: "https://github.com/Abdulmalik652006",
+  linkedin: "https://www.linkedin.com/in/abdul-malik-b-j-1215462ba/",
   portfolio: "https://abdulmalikbj.vercel.app",
   resumePath: "/Abdul_Malik_Resume.pdf",
   photoPath: "/profile.jpg",
@@ -105,7 +105,7 @@ export const projectsData = [
       "Automated Report Generation",
       "Historical Trend Analysis & KPI Monitoring"
     ],
-    github: "https://github.com/abdulmalikbj",
+    github: "https://github.com/Abdulmalik652006",
     demo: "#"
   },
   {
@@ -129,7 +129,7 @@ export const projectsData = [
       "Integrated Workspace State Management",
       "Developer Productivity Tooling"
     ],
-    github: "https://github.com/abdulmalikbj",
+    github: "https://github.com/Abdulmalik652006",
     demo: "#"
   }
 ];
@@ -213,3 +213,4 @@ export const languagesData = [
   { language: "Tamil", proficiency: "Native / Mother Tongue", flag: "TA" },
   { language: "Arabic", proficiency: "Reading Proficiency", flag: "AR" }
 ];
+

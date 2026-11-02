@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, ArrowRight, Github, Linkedin, Mail, MapPin, Sparkles, Database, Brain, Terminal, FileCode } from 'lucide-react';
+import { Download, ArrowRight, Github, Linkedin, Mail, MapPin, Sparkles } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function Hero() {
@@ -124,14 +124,14 @@ export default function Hero() {
 
           </div>
 
-          {/* Right Column: Interactive Photo Card & Live Badges (5 cols) */}
+          {/* Right Column: Clean Professional Photo Card (5 cols) */}
           <div className="lg:col-span-5 flex justify-center relative">
             
             {/* Glowing Backdrop Ring */}
             <div className="relative w-72 sm:w-80 md:w-96 aspect-[4/5] max-w-full">
               <div className="absolute -inset-2 bg-gradient-to-tr from-purple-600 via-blue-600 to-cyan-400 rounded-3xl blur-2xl opacity-40 animate-glow" />
               
-              {/* Main Card Container */}
+              {/* Main Card Container - Clean without cluttering badges */}
               <div className="relative h-full w-full rounded-2xl p-1 bg-gradient-to-b from-white/20 via-white/5 to-white/10 backdrop-blur-xl shadow-2xl overflow-hidden">
                 <div className="h-full w-full rounded-[14px] bg-[#0c0e17] overflow-hidden relative group">
                   
@@ -139,50 +139,13 @@ export default function Hero() {
                   <img
                     src={personalInfo.photoPath}
                     alt={personalInfo.name}
-                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105 filter brightness-95 contrast-105"
+                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105 filter brightness-100 contrast-105"
                     loading="eager"
                   />
 
-                  {/* Gradient shadow overlay on photo */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#07080d] via-transparent to-transparent opacity-90" />
-                  
-                  {/* Photo Bottom Caption */}
-                  <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-slate-900/85 backdrop-blur-md border border-white/10">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="text-white font-bold text-sm">{personalInfo.name}</p>
-                        <p className="text-cyan-400 text-xs font-mono">B.Tech AI &amp; DS &bull; 2023–2027</p>
-                      </div>
-                      <div className="text-right">
-                        <span className="inline-block px-2 py-0.5 rounded text-[11px] font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30">
-                          CGPA 8.20
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+                  {/* Subtle edge gradient to blend nicely with card */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#07080d]/60 via-transparent to-transparent pointer-events-none" />
 
-                </div>
-              </div>
-
-              {/* Floating Badge 1: Predictive & ML */}
-              <div className="absolute -top-4 -left-4 sm:-left-8 px-3.5 py-2 rounded-xl bg-[#111422]/90 backdrop-blur-md border border-purple-500/30 shadow-lg shadow-purple-950/40 hidden sm:flex items-center gap-2.5 animate-float-slow">
-                <div className="p-2 rounded-lg bg-purple-500/20 text-purple-400">
-                  <Brain className="w-4 h-4" />
-                </div>
-                <div>
-                  <p className="text-[11px] font-mono text-slate-400 uppercase">Focus Area</p>
-                  <p className="text-xs font-bold text-white">AI / ML &amp; Data</p>
-                </div>
-              </div>
-
-              {/* Floating Badge 2: DevOps & Cloud */}
-              <div className="absolute -bottom-4 -right-4 sm:-right-6 px-3.5 py-2 rounded-xl bg-[#111422]/90 backdrop-blur-md border border-cyan-500/30 shadow-lg shadow-cyan-950/40 hidden sm:flex items-center gap-2.5 animate-float-slow" style={{ animationDelay: '1.5s' }}>
-                <div className="p-2 rounded-lg bg-cyan-500/20 text-cyan-400">
-                  <Database className="w-4 h-4" />
-                </div>
-                <div>
-                  <p className="text-[11px] font-mono text-slate-400 uppercase">Cloud &amp; DevOps</p>
-                  <p className="text-xs font-bold text-white">AWS &bull; Docker &bull; IaC</p>
                 </div>
               </div>
 

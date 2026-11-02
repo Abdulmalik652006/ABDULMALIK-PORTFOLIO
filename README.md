@@ -170,7 +170,7 @@ git commit -m "feat: Initial commit of Abdul Malik B J developer portfolio"
 git branch -M main
 
 # 4. Add your GitHub remote URL (replace with your actual GitHub repo URL)
-git remote add origin https://github.com/abdulmalikbj/portfolio.git
+git remote add origin https://github.com/Abdulmalik652006/portfolio.git
 
 # 5. Push to GitHub
 git push -u origin main
@@ -223,3 +223,4 @@ In your Vercel project settings:
 ## 📄 License & Attribution
 
 Designed and engineered for **Abdul Malik B J**. Content derived from verified academic and professional credentials.
+

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Download, Github, Linkedin, Mail, ExternalLink, Terminal } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 const navLinks = [
@@ -94,47 +94,52 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Right Action Buttons */}
-          <div className="hidden lg:flex items-center gap-3">
+          {/* Right Action Icons: GitHub, LinkedIn, Email */}
+          <div className="hidden lg:flex items-center gap-2">
             <a
               href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub Profile"
-              className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
+              className="px-3 py-1.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 transition-colors flex items-center gap-1.5 text-xs font-medium border border-white/5"
+              title="GitHub Profile"
             >
-              <Github className="w-5 h-5" />
+              <Github className="w-4 h-4 text-cyan-400" />
+              <span>GitHub</span>
             </a>
+            
             <a
               href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn Profile"
-              className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
+              className="px-3 py-1.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 transition-colors flex items-center gap-1.5 text-xs font-medium border border-white/5"
+              title="LinkedIn Profile"
             >
-              <Linkedin className="w-5 h-5" />
+              <Linkedin className="w-4 h-4 text-purple-400" />
+              <span>LinkedIn</span>
             </a>
 
             <a
-              href={personalInfo.resumePath}
-              download="Abdul_Malik_B_J_Resume.pdf"
-              className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold text-white bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 hover:from-purple-500 hover:to-cyan-400 shadow-md shadow-purple-600/20 hover:shadow-cyan-500/30 transition-all duration-200 active:scale-95"
+              href={`mailto:${personalInfo.email}`}
+              aria-label="Email Me"
+              className="px-3 py-1.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 transition-colors flex items-center gap-1.5 text-xs font-medium border border-white/5"
+              title="Email Me"
             >
-              <Download className="w-4 h-4" />
-              <span>Resume</span>
+              <Mail className="w-4 h-4 text-blue-400" />
+              <span>Email</span>
             </a>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center gap-2">
             <a
-              href={personalInfo.resumePath}
-              download="Abdul_Malik_B_J_Resume.pdf"
+              href={`mailto:${personalInfo.email}`}
               className="p-2 rounded-lg text-slate-200 bg-white/10 hover:bg-white/20 transition-colors"
-              title="Download Resume"
-              aria-label="Download Resume"
+              title="Email"
+              aria-label="Email"
             >
-              <Download className="w-4 h-4 text-cyan-400" />
+              <Mail className="w-4 h-4 text-cyan-400" />
             </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -165,41 +170,29 @@ export default function Navbar() {
               </a>
             ))}
 
-            <div className="pt-4 mt-2 border-t border-white/10 flex flex-col gap-3">
-              <a
-                href={personalInfo.resumePath}
-                download="Abdul_Malik_B_J_Resume.pdf"
-                onClick={() => setIsOpen(false)}
-                className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-cyan-500 shadow-md"
+            <div className="pt-4 mt-2 border-t border-white/10 flex items-center justify-around text-slate-300">
+              <a 
+                href={personalInfo.github} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-xs hover:text-white py-2"
               >
-                <Download className="w-4 h-4" />
-                <span>Download Resume</span>
+                <Github className="w-4 h-4 text-cyan-400" /> GitHub
               </a>
-
-              <div className="flex items-center justify-center gap-6 pt-2 text-slate-400">
-                <a 
-                  href={personalInfo.github} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 text-xs hover:text-white"
-                >
-                  <Github className="w-4 h-4" /> GitHub
-                </a>
-                <a 
-                  href={personalInfo.linkedin} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 text-xs hover:text-white"
-                >
-                  <Linkedin className="w-4 h-4" /> LinkedIn
-                </a>
-                <a 
-                  href={`mailto:${personalInfo.email}`} 
-                  className="flex items-center gap-1.5 text-xs hover:text-white"
-                >
-                  <Mail className="w-4 h-4" /> Email
-                </a>
-              </div>
+              <a 
+                href={personalInfo.linkedin} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-xs hover:text-white py-2"
+              >
+                <Linkedin className="w-4 h-4 text-purple-400" /> LinkedIn
+              </a>
+              <a 
+                href={`mailto:${personalInfo.email}`} 
+                className="flex items-center gap-1.5 text-xs hover:text-white py-2"
+              >
+                <Mail className="w-4 h-4 text-blue-400" /> Email
+              </a>
             </div>
           </div>
         </div>
