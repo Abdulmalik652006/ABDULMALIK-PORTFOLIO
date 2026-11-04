@@ -56,8 +56,11 @@ An AI-powered predictive management dashboard that uses machine learning to anal
 **Technologies:** React.js, JavaScript, Node.js, MongoDB, Machine Learning.
 
 C2X – AI-Powered Desktop IDE & Developer Platform 
-Tech Stack: React.js, TypeScript, JavaScript, Monaco Editor, Git, GitHub. 
+
+  Tech Stack: React.js, TypeScript, JavaScript, Monaco Editor, Git, GitHub. 
+  
   Developing a browser-based code editor inspired by VS Code with syntax highlighting, multi-tab editing, and file management. 
+  
   Implementing workspace management, developer productivity tools, and an integrated IDE interface.
 
 
